@@ -9,40 +9,65 @@ research-agent/
 │   ├── coordinator.md
 │   ├── idea.md
 │   ├── literature.md
+│   ├── gap-mapper.md
+│   ├── skeptic.md
 │   ├── critique.md
 │   ├── brief.md
-│   └── baseline.md
+│   ├── experiment-designer.md
+│   ├── baseline.md
+│   ├── analyst.md
+│   ├── reviewer.md
+│   └── memory-manager.md
 ├── shared/
-│   └── research-draft.md
+│   ├── research-draft.md
+│   ├── scorecard.md
+│   ├── experiment-plan.md
+│   └── review-report.md
 ├── workspaces/
 │   ├── coordinator/
 │   ├── idea/
 │   ├── literature/
+│   ├── gap-mapper/
+│   ├── skeptic/
 │   ├── critique/
 │   ├── brief/
-│   └── baseline/
-└── references/
-    └── workflow.md
+│   ├── experiment-designer/
+│   ├── baseline/
+│   ├── analyst/
+│   ├── reviewer/
+│   └── memory-manager/
+├── shared/memory/
+│   ├── ideas/
+│   ├── papers/
+│   ├── failures/
+│   ├── datasets/
+│   ├── decisions/
+│   └── open-questions/
+└── baselines/
 ```
 
 ## End-to-End Flow
 
 1. Coordinator initializes the draft with the raw idea.
-2. Idea agent writes concrete hypotheses.
-3. Literature agent reviews related work and gaps.
-4. Critique agent scores the direction.
-5. If score < 7, coordinator loops back.
-6. If score ≥ 7, brief agent generates the research brief.
-7. Human reviews.
-8. Baseline agent scaffolds the initial implementation.
+2. Idea agent generates candidate hypotheses.
+3. Literature agent reviews related work.
+4. Gap Mapper converts literature into an opportunity landscape.
+5. Skeptic tries to kill weak directions early.
+6. Critique agent scores the survivors.
+7. Coordinator updates `shared/scorecard.md` and selects the lead direction.
+8. Brief agent turns the selected direction into a research brief.
+9. Experiment Designer writes the experiment plan.
+10. Human checkpoint: approve / revise / kill.
+11. Baseline agent builds and runs the initial scaffold.
+12. Analyst interprets outputs.
+13. Reviewer judges publication readiness.
+14. Memory Manager stores durable lessons.
 
-## Scratch Space Policy
+## Top-Lab Behaviors Built In
 
-Each specialist agent may write temporary notes into its own folder under `workspaces/<agent>/`.
-The only shared source of truth is `shared/research-draft.md`.
-
-## Human Control Points
-
-- After critique: continue or iterate?
-- After brief: approve or revise?
-- Before baseline: final go/no-go.
+- aggressive idea triage
+- specialist roles instead of one omni-agent
+- failed-idea memory
+- reviewer-aware evaluation
+- explicit human checkpoints before expensive work
+- exploration first, exploitation second

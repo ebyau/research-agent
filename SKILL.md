@@ -9,14 +9,20 @@ description: Multi-agent research pipeline that transforms raw ideas, vague proj
 
 ```text
 coordinator
-├── idea_agent        → concrete hypotheses from vague ideas
-├── literature_agent  → gap analysis, paper search
-├── critique_agent    → score & challenge the direction
-├── brief_agent       → problem statement, RQs, experiments, datasets
-└── baseline_agent    → implementation scaffold + evaluation harness
+├── ideation agent
+├── literature agent
+├── gap-mapper agent
+├── skeptic agent
+├── critique agent
+├── brief agent
+├── experiment-designer agent
+├── baseline agent
+├── analyst agent
+├── reviewer agent
+└── memory-manager agent
 ```
 
-Read `references/workflow.md` when you need the full execution flow or workspace layout.
+Read `references/workflow.md` for the full execution flow and `references/top-lab-patterns.md` for the research-lab design patterns used here.
 
 ## Usage
 
@@ -53,10 +59,13 @@ Review brief. If approved → proceed to baseline.
 /spawn research-agent.baseline
 ```
 
-## Shared Document
+## Shared Documents
 
-All agents write to `skills/research-agent/shared/research-draft.md`.
-You maintain this as the source of truth between stages.
+Primary shared files:
+- `shared/research-draft.md` — main source of truth
+- `shared/scorecard.md` — candidate ranking and triage
+- `shared/experiment-plan.md` — experiment specification
+- `shared/review-report.md` — analyst + reviewer judgments
 
 ## Agent Definitions
 
@@ -64,10 +73,16 @@ You maintain this as the source of truth between stages.
 |-------|------|------|
 | coordinator | `agents/coordinator.md` | Routes the pipeline, manages iteration, and keeps the draft coherent |
 | idea | `agents/idea.md` | Reframe vague ideas → concrete hypotheses |
-| literature | `agents/literature.md` | Gap analysis, paper search |
-| critique | `agents/critique.md` | Score & challenge direction |
-| brief | `agents/brief.md` | Research brief generator |
-| baseline | `agents/baseline.md` | Implementation & experiments |
+| literature | `agents/literature.md` | Review related work and extract gaps |
+| gap-mapper | `agents/gap-mapper.md` | Convert literature into an opportunity landscape |
+| skeptic | `agents/skeptic.md` | Kill weak directions early and document failure modes |
+| critique | `agents/critique.md` | Score and challenge candidate directions |
+| brief | `agents/brief.md` | Generate the research brief |
+| experiment-designer | `agents/experiment-designer.md` | Specify the rigorous experiment plan |
+| baseline | `agents/baseline.md` | Build baseline implementation and evaluation harness |
+| analyst | `agents/analyst.md` | Interpret results and recommend next steps |
+| reviewer | `agents/reviewer.md` | Judge publishability and reviewer objections |
+| memory-manager | `agents/memory-manager.md` | Capture durable research memory across cycles |
 
 ## Quality Gates
 
