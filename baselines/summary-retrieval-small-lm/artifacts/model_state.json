@@ -1,0 +1,8 @@
+{
+  "name": "mock-small-lm-summary-retriever",
+  "base_accuracy": 0.46,
+  "flat_gain": 0.08,
+  "hierarchy_gain": 0.14,
+  "noise_penalty": 0.18,
+  "faithfulness_bias": 0.03
+}

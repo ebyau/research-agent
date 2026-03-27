@@ -1,0 +1,112 @@
+{
+  "project": "summary-retrieval-small-lm",
+  "status": "mock_baseline_complete",
+  "dataset": {
+    "name": "hotpotqa_synthetic_smoke_test",
+    "num_examples": 6,
+    "mode": "synthetic_smoke_test"
+  },
+  "experiments": {
+    "Raw Chunk RAG Baseline": {
+      "method": "raw_chunk",
+      "metrics": {
+        "em": 0.373,
+        "f1": 0.445,
+        "retrieval_recall": 0.493,
+        "latency": 0.93,
+        "support_score": 0.635
+      },
+      "baseline_to_beat": "Standard chunk retrieval",
+      "comparison": {
+        "delta_em": 0.0,
+        "delta_f1": 0.0,
+        "delta_latency": 0.0
+      },
+      "success_criteria": {
+        "pass_em": false,
+        "pass_f1": false,
+        "pass_recall": false
+      }
+    },
+    "Flat Intermediate Summary Retrieval": {
+      "method": "flat_summary",
+      "metrics": {
+        "em": 0.477,
+        "f1": 0.549,
+        "retrieval_recall": 0.597,
+        "latency": 0.7,
+        "support_score": 0.635
+      },
+      "baseline_to_beat": "Raw Chunk RAG Baseline",
+      "comparison": {
+        "delta_em": 0.104,
+        "delta_f1": 0.104,
+        "delta_latency": -0.23
+      },
+      "success_criteria": {
+        "pass_em": true,
+        "pass_f1": false,
+        "pass_recall": true
+      }
+    },
+    "Hierarchical Summary Retrieval": {
+      "method": "hierarchical_summary",
+      "metrics": {
+        "em": 0.566,
+        "f1": 0.637,
+        "retrieval_recall": 0.686,
+        "latency": 0.76,
+        "support_score": 0.625
+      },
+      "baseline_to_beat": "Flat Intermediate Summary Retrieval",
+      "comparison": {
+        "delta_em": 0.089,
+        "delta_f1": 0.088,
+        "delta_latency": 0.06
+      },
+      "success_criteria": {
+        "pass_em": true,
+        "pass_f1": true,
+        "pass_recall": true
+      }
+    }
+  },
+  "noisy_context_stress_test": {
+    "raw_chunk": {
+      "em": 0.343,
+      "f1": 0.413,
+      "retrieval_recall": 0.463,
+      "latency": 0.932,
+      "support_score": 0.585
+    },
+    "flat_summary": {
+      "em": 0.456,
+      "f1": 0.526,
+      "retrieval_recall": 0.576,
+      "latency": 0.703,
+      "support_score": 0.585
+    },
+    "hierarchical_summary": {
+      "em": 0.551,
+      "f1": 0.621,
+      "retrieval_recall": 0.671,
+      "latency": 0.762,
+      "support_score": 0.575
+    }
+  },
+  "faithfulness_audit": {
+    "flat_summary": {
+      "support_score": 0.635,
+      "estimated_omission_rate": 0.365
+    },
+    "hierarchical_summary": {
+      "support_score": 0.625,
+      "estimated_omission_rate": 0.375
+    }
+  },
+  "overall_success": {
+    "hierarchical_beats_flat_f1": true,
+    "flat_beats_raw_f1": true,
+    "hierarchical_more_robust_under_noise": true
+  }
+}

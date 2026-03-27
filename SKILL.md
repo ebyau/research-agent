@@ -1,30 +1,34 @@
-# Research Agent Skill
+---
+name: research-agent
+description: Multi-agent research pipeline that transforms raw ideas, vague project thoughts, and early-stage concepts into concrete research directions, literature reviews, problem statements, experiment plans, dataset candidates, and baseline implementations. Use when creating or running a research workflow with coordinated subagents for idea reframing, literature review, critique, brief generation, and baseline setup.
+---
 
-Multi-agent research pipeline — transforms raw ideas into research plans.
+# Research Agent Skill
 
 ## Overview
 
+```text
+coordinator
+├── idea_agent        → concrete hypotheses from vague ideas
+├── literature_agent  → gap analysis, paper search
+├── critique_agent    → score & challenge the direction
+├── brief_agent       → problem statement, RQs, experiments, datasets
+└── baseline_agent    → implementation scaffold + evaluation harness
 ```
-you (coordinator) 
-├── idea_agent      → concrete hypotheses from vague ideas
-├── literature_agent → gap analysis, paper search
-├── critique_agent  → score & challenge the direction
-└── brief_agent      → problem statement, RQs, experiments, datasets
 
-pass → baseline_agent → implementation & experiments
-```
+Read `references/workflow.md` when you need the full execution flow or workspace layout.
 
 ## Usage
 
 ### Start a research pipeline
 
-Provide a raw idea or vague concept:
+Provide a raw idea or vague concept to the coordinator:
 
-```
-/spawn research-agent.idea idea="I want to do something with LLMs and reasoning"
+```text
+coordinator → idea → literature → critique → brief → baseline
 ```
 
-The idea agent reframes it into concrete hypotheses, writes to shared research doc.
+The coordinator initializes the draft, routes work, and decides whether to iterate or move forward.
 
 ### Literature review loop (stages 1-3)
 
@@ -58,6 +62,7 @@ You maintain this as the source of truth between stages.
 
 | Agent | File | Role |
 |-------|------|------|
+| coordinator | `agents/coordinator.md` | Routes the pipeline, manages iteration, and keeps the draft coherent |
 | idea | `agents/idea.md` | Reframe vague ideas → concrete hypotheses |
 | literature | `agents/literature.md` | Gap analysis, paper search |
 | critique | `agents/critique.md` | Score & challenge direction |

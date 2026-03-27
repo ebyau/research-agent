@@ -1,0 +1,50 @@
+[
+  {
+    "example_id": "ex1",
+    "question": "Which city hosted the inventor's university?",
+    "answer": "edinburgh",
+    "noise_level": 0.1,
+    "composition_hops": 2,
+    "faithfulness_risk": 0.15
+  },
+  {
+    "example_id": "ex2",
+    "question": "What river connects the birthplace and treaty location?",
+    "answer": "danube",
+    "noise_level": 0.2,
+    "composition_hops": 3,
+    "faithfulness_risk": 0.2
+  },
+  {
+    "example_id": "ex3",
+    "question": "Which scientist mentored the author of the cited report?",
+    "answer": "curie",
+    "noise_level": 0.5,
+    "composition_hops": 2,
+    "faithfulness_risk": 0.35
+  },
+  {
+    "example_id": "ex4",
+    "question": "Which country governed both events described across the two reports?",
+    "answer": "france",
+    "noise_level": 0.6,
+    "composition_hops": 3,
+    "faithfulness_risk": 0.3
+  },
+  {
+    "example_id": "ex5",
+    "question": "What organization funded the final mission in the combined timeline?",
+    "answer": "esa",
+    "noise_level": 0.8,
+    "composition_hops": 4,
+    "faithfulness_risk": 0.4
+  },
+  {
+    "example_id": "ex6",
+    "question": "Which material appears in both the prototype and archival note?",
+    "answer": "graphene",
+    "noise_level": 0.7,
+    "composition_hops": 2,
+    "faithfulness_risk": 0.25
+  }
+]

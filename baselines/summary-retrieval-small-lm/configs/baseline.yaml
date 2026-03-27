@@ -1,0 +1,16 @@
+project_name: summary-retrieval-small-lm
+
+data:
+  dataset_name: hotpotqa_synthetic_smoke_test
+  real_dataset_candidates:
+    - HotpotQA
+    - MuSiQue
+    - 2WikiMultihopQA
+
+thresholds:
+  min_em: 0.45
+  min_f1: 0.55
+  min_retrieval_recall: 0.55
+
+paths:
+  artifacts_dir: artifacts
