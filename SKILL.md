@@ -74,3 +74,29 @@ through idea → literature → critique until the direction strengthens.
 - Web search capability (brave search or similar)
 - File write access to shared research draft
 - Spawn permission for subagents
+
+## Memory Best Practices
+
+For this pipeline to work reliably:
+
+1. **Keep workspace files small** — total < 8KB. Agent prompts inject every message.
+2. **Write before compaction** — use `memory/YYYY-MM-DD.md` for daily logs; `MEMORY.md` for durable facts. Rules in chat don't survive compaction.
+3. **Enable memory flush** — set `compaction.memoryFlush.enabled = true` so the agent saves context before it gets trimmed.
+4. **Use memory_search** — semantic recall over file-based memory, not mental notes.
+5. **Subagents for heavy work** — keeps main session context lean.
+
+### Config Recommendations
+
+```json
+{
+  "agents": {
+    "defaults": {
+      "contextPruning": { "mode": "cache-ttl", "ttl": "5m" },
+      "compaction": {
+        "reserveTokensFloor": 20000,
+        "memoryFlush": { "enabled": true, "softThresholdTokens": 4000 }
+      }
+    }
+  }
+}
+```
