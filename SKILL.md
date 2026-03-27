@@ -97,6 +97,59 @@ For this pipeline to work reliably:
         "memoryFlush": { "enabled": true, "softThresholdTokens": 4000 }
       }
     }
+  },
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "includeDefaultMemory": true,
+      "update": { "interval": "5m", "debounceMs": 15000 },
+      "limits": { "maxResults": 6, "maxSnippetChars": 700 }
+    }
   }
 }
 ```
+
+### QMD Setup (Optional — for hybrid BM25 + vector search)
+
+QMD is a local sidecar that replaces the default SQLite memory backend with better retrieval.
+
+**Prerequisites:**
+- QMD CLI: `bun install -g https://github.com/tobi/qmd` or `npm install -g @tobilu/qmd`
+- Or use the npm global install already available
+
+**Initial setup:**
+```bash
+# Create collection for your workspace
+export XDG_CONFIG_HOME="$HOME/.openclaw/agents/main/qmd/xdg-config"
+export XDG_CACHE_HOME="$HOME/.openclaw/agents/main/qmd/xdg-cache"
+mkdir -p "$XDG_CONFIG_HOME" "$XDG_CACHE_HOME"
+
+# Add workspace to QMD
+qmd collection add ~/.openclaw/workspace --name "workspace"
+
+# Generate embeddings (one-time, downloads ~300MB model)
+qmd embed --collection workspace
+
+# Verify
+qmd status
+qmd query "your search term" --json
+```
+
+**What QMD provides:**
+- BM25 keyword search + vector similarity combined
+- MMR (Maximal Marginal Relevance) reranking for diverse results
+- Local GGUF embeddings via node-llama-cpp (no external API)
+- Falls back to built-in SQLite if QMD is unavailable
+
+**When QMD is unavailable:** OpenClaw auto-falls back to builtin SQLite manager — memory tools keep working.
+
+### Full Memory Layer Stack
+
+| Layer | Component | Purpose |
+|-------|-----------|---------|
+| 1 | `memory/YYYY-MM-DD.md` | Daily raw logs |
+| 2 | `MEMORY.md` | Curated long-term facts |
+| 3 | `memory_search` / QMD | Semantic retrieval over all memory |
+| 4 | `compaction.memoryFlush` | Pre-compaction save (survives context trim) |
+| 5 | Graph memory (future) | Entity relationships |
+| 6 | Auto-fact extraction (future) | Structured facts from conversations |
