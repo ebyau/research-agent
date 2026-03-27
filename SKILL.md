@@ -9,6 +9,8 @@ description: Multi-agent research pipeline that transforms raw ideas, vague proj
 
 ```text
 coordinator
+├── batch-ideation agent
+├── scorecard-manager agent
 ├── ideation agent
 ├── literature agent
 ├── gap-mapper agent
@@ -73,6 +75,8 @@ Primary shared files:
 | Agent | File | Role |
 |-------|------|------|
 | coordinator | `agents/coordinator.md` | Routes the pipeline, manages iteration, and keeps the draft coherent |
+| batch-ideation | `agents/batch-ideation.md` | Generate 5-10 candidate directions before deep work |
+| scorecard-manager | `agents/scorecard-manager.md` | Auto-fill the scorecard and rank candidates |
 | idea | `agents/idea.md` | Reframe vague ideas → concrete hypotheses |
 | literature | `agents/literature.md` | Review related work and extract gaps |
 | gap-mapper | `agents/gap-mapper.md` | Convert literature into an opportunity landscape |

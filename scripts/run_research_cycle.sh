@@ -23,6 +23,8 @@ $IDEA
 - Initialized by run_research_cycle.sh on $DATE
 - Mode: exploration first, exploitation second
 
+## Batch Ideation
+
 ## Hypotheses
 
 ## Literature Review
@@ -100,4 +102,4 @@ cat > "$SHARED/review-report.md" <<EOF
 EOF
 
 echo "Initialized research cycle in: $SHARED"
-echo "Next recommended order: idea -> literature -> gap-mapper -> skeptic -> critique -> brief -> kill-test -> experiment-designer -> baseline -> analyst -> reviewer -> memory-manager"
+echo "Next recommended order: batch-ideation -> literature (shallow) -> gap-mapper -> skeptic -> scorecard-manager -> idea/critique on top candidates -> brief -> kill-test -> experiment-designer -> baseline -> analyst -> reviewer -> memory-manager"
