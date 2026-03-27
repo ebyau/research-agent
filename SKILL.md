@@ -19,6 +19,7 @@ coordinator
 ├── baseline agent
 ├── analyst agent
 ├── reviewer agent
+├── kill-test agent
 └── memory-manager agent
 ```
 
@@ -82,6 +83,7 @@ Primary shared files:
 | baseline | `agents/baseline.md` | Build baseline implementation and evaluation harness |
 | analyst | `agents/analyst.md` | Interpret results and recommend next steps |
 | reviewer | `agents/reviewer.md` | Judge publishability and reviewer objections |
+| kill-test | `agents/kill-test.md` | Design the cheapest falsification test before heavy work |
 | memory-manager | `agents/memory-manager.md` | Capture durable research memory across cycles |
 
 ## Quality Gates

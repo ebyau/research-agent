@@ -4,8 +4,11 @@
 
 | Direction | Novelty | Feasibility | Impact | Data | Eval Clarity | Publication Potential | Total | Decision |
 |-----------|---------|-------------|--------|------|--------------|-----------------------|-------|----------|
-| _fill in_ | | | | | | | | |
+| _fill in after ideation/lit/gap/skeptic_ | | | | | | | | |
 
-## Notes
-- Use this after idea + literature + gap mapping.
-- Kill weak ideas early.
+## Mandatory Gate
+- Total < 6.5 → Kill
+- 6.5 to 7.2 → Revise
+- > 7.2 → Proceed
+- No brief unless a direction is marked Proceed.
+- No baseline unless reviewer verdict is at least promising.
