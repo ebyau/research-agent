@@ -22,6 +22,7 @@ coordinator
 ├── analyst agent
 ├── reviewer agent
 ├── kill-test agent
+├── writeup agent
 └── memory-manager agent
 ```
 
@@ -69,6 +70,7 @@ Primary shared files:
 - `shared/scorecard.md` — candidate ranking and triage
 - `shared/experiment-plan.md` — experiment specification
 - `shared/review-report.md` — analyst + reviewer judgments
+- `shared/final-writeup.typ` — final human-readable research writeup in Typst
 
 ## Agent Definitions
 
@@ -88,6 +90,7 @@ Primary shared files:
 | analyst | `agents/analyst.md` | Interpret results and recommend next steps |
 | reviewer | `agents/reviewer.md` | Judge publishability and reviewer objections |
 | kill-test | `agents/kill-test.md` | Design the cheapest falsification test before heavy work |
+| writeup | `agents/writeup.md` | Consolidate the final research cycle into Typst |
 | memory-manager | `agents/memory-manager.md` | Capture durable research memory across cycles |
 
 ## Quality Gates

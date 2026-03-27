@@ -150,6 +150,25 @@ research-agent/
 - `shared/memory/` stores durable lab knowledge.
 - `references/` documents workflow and top-lab patterns used in the design.
 - `baselines/` contains runnable or mock baseline scaffolds.
+- `shared/final-writeup.typ` is the final human-readable writeup artifact.
+
+## Project Card Template
+
+Use this in a project README or project root summary:
+
+```md
+# Project Card
+
+- **Title:**
+- **Status:** ideation / review / brief / experiment / baseline / analysis
+- **Lead Direction:**
+- **Core Hypothesis:**
+- **Primary Datasets:**
+- **Main Metric:**
+- **Current Gate:**
+- **Main Blocker:**
+- **Next Step:**
+```
 
 ## Status
 
