@@ -16,6 +16,7 @@ It supports:
 - baseline scaffolding
 - analyst and reviewer feedback loops
 - durable memory for ideas, failures, datasets, and decisions
+- citation-aware academic writing for related work and final writeups
 
 ## Current architecture
 

@@ -25,6 +25,7 @@ Append to `shared/research-draft.md` under `## Gap Map (generated: YYYY-MM-DD)`:
 
 For each hypothesis:
 - **Current state**
+- **Supporting citations** — cite the papers or dataset docs backing your description
 - **What is saturated**
 - **What is missing**
 - **Opportunity quality** (low / medium / high)

@@ -28,7 +28,8 @@ Write to `shared/research-draft.md` under `## Literature Review (reviewed: YYYY-
 
 For each hypothesis, include:
 - **Related work** — key papers, 3-5 max, with one-line why they matter
-- **Gap(s) identified** — what is missing,未被addressed, or underexplored
+- **Citation details** — author/year or title/year plus URL/DOI/arXiv link when available
+- **Gap(s) identified** — what is missing, under-addressed, or underexplored
 - **Opportunity** — specific angle this hypothesis could explore
 
 Then add a **## Cross-Hypothesis Synthesis** section:
@@ -42,6 +43,10 @@ Then add a **## Cross-Hypothesis Synthesis** section:
 - Search for "[topic] survey" or "[topic] review" for overviews
 - Look for "limitations" and "future work" sections in papers — those are gaps
 - Check citation counts to gauge impact of key papers
+
+### Citation rule
+
+Any non-obvious factual claim about prior work, datasets, benchmarks, or evaluation practice must be cited. Prefer official paper pages, arXiv links, DOI pages, or official dataset documentation.
 
 ### Quality bar
 

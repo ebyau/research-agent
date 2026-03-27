@@ -28,6 +28,7 @@ The writeup should be readable by a human researcher and suitable as a project p
 - Risks / Limitations
 - Expected Contributions
 - Next Steps
+- References
 
 ### Output rules
 - Write to `shared/final-writeup.typ`
@@ -35,3 +36,5 @@ The writeup should be readable by a human researcher and suitable as a project p
 - Prefer concise prose over bloated exposition
 - If results are only from a smoke test, say so clearly
 - Carry reviewer caveats forward instead of hiding them
+- For academic claims, include inline citations and a `References` section
+- Clearly distinguish sourced claims from agent synthesis

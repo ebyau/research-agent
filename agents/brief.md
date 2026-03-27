@@ -39,6 +39,7 @@ Numbered list, 2-4 RQs. Each should be:
 ### Literature Review Summary
 3-4 paragraphs synthesizing the key related work. Do not just list papers —
 synthesize themes, debates, and the current state of the field.
+Every substantive claim in this section should carry inline citations like `[Author, Year]` plus a reference list or link list.
 
 ### Proposed Experiments
 Numbered list of 3-5 experiments that together would answer the RQs.
@@ -52,6 +53,7 @@ For each:
 ### Dataset Options
 2-4 candidate datasets with:
 - **Name + source**
+- **Citation / official URL**
 - **Size / scale**
 - **Relevant features**
 - **Known limitations**
