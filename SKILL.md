@@ -22,6 +22,8 @@ coordinator
 ├── analyst agent
 ├── reviewer agent
 ├── kill-test agent
+├── paper-writer agent
+├── paper-editor agent
 ├── writeup agent
 └── memory-manager agent
 ```
@@ -90,6 +92,8 @@ Primary shared files:
 | analyst | `agents/analyst.md` | Interpret results and recommend next steps |
 | reviewer | `agents/reviewer.md` | Judge publishability and reviewer objections |
 | kill-test | `agents/kill-test.md` | Design the cheapest falsification test before heavy work |
+| paper-writer | `agents/paper-writer.md` | Draft a research-grade paper or proposal in Typst |
+| paper-editor | `agents/paper-editor.md` | Refine the draft into coherent academic writing |
 | writeup | `agents/writeup.md` | Consolidate the final research cycle into Typst |
 | memory-manager | `agents/memory-manager.md` | Capture durable research memory across cycles |
 

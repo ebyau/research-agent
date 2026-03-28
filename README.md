@@ -35,6 +35,8 @@ coordinator
 ├── baseline
 ├── analyst
 ├── reviewer
+├── paper-writer
+├── paper-editor
 └── memory-manager
 ```
 
@@ -64,6 +66,10 @@ baseline
 analysis
   ↓
 reviewer pass
+  ↓
+paper-writer
+  ↓
+paper-editor
   ↓
 memory capture
 ```
