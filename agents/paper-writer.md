@@ -48,6 +48,7 @@ Structure:
 ### Rules
 - Write in formal academic prose.
 - Keep section logic tight and ordered.
+- Clearly explain the proposed approach so a researcher can understand the method, not just the motivation.
 - Do not invent results.
 - If only pilot or proxy results exist, say so explicitly.
 - Every non-obvious factual claim should be cited.
