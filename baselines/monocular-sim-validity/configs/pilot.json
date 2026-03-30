@@ -1,0 +1,14 @@
+{
+  "seed": 7,
+  "num_agents": 5,
+  "num_steps": 20,
+  "noise": {
+    "position_std": 0.4,
+    "velocity_std": 0.2,
+    "heading_std": 0.05
+  },
+  "metrics": {
+    "near_miss_distance": 2.0,
+    "interaction_horizon": 5
+  }
+}

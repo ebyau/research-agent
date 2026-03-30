@@ -2,18 +2,21 @@
 
 ## Candidate Directions
 
-| Rank | Direction | Novelty | Feasibility | Impact | Data | Eval Clarity | Publication Potential | Total | Decision |
-|------|-----------|---------|-------------|--------|------|--------------|-----------------------|-------|----------|
-| 1 | Budgeted Reasoning with Retrieval Escalation | 8.0 | 8.0 | 8.5 | 8.0 | 8.5 | 8.0 | 8.2 | Proceed |
-| 2 | Query-Adaptive Retrieval Planner | 8.0 | 8.0 | 8.0 | 7.5 | 8.0 | 7.5 | 7.8 | Proceed |
-| 3 | Hierarchical Summary Controller | 7.5 | 7.0 | 8.0 | 7.5 | 7.0 | 7.5 | 7.4 | Proceed |
-| 4 | Failure-Aware Compression Training | 7.5 | 6.5 | 7.5 | 7.0 | 7.0 | 7.0 | 7.1 | Revise |
-| 5 | Memory-as-Argument Graph | 7.5 | 5.5 | 7.0 | 6.5 | 6.5 | 7.0 | 6.7 | Revise |
+| Direction | Novelty | Feasibility | Impact | Data | Eval Clarity | Publication Potential | Total | Decision |
+|-----------|---------|-------------|--------|------|--------------|-----------------------|-------|----------|
+| Utility-Calibrated Monocular Reconstruction | 8.0 | 7.0 | 8.5 | 6.5 | 7.5 | 8.0 | 7.6 | Proceed |
+| Error-Budget Cartography for Simulation Validity | 8.5 | 8.0 | 8.0 | 8.0 | 8.5 | 8.0 | 8.2 | Proceed |
+| Interaction-Faithful Scene Reconstruction | 7.5 | 6.5 | 8.0 | 7.0 | 6.5 | 7.5 | 7.2 | Revise |
+| Monocular Near-Miss Scenario Mining | 7.0 | 5.5 | 8.5 | 5.5 | 5.5 | 6.5 | 6.4 | Kill |
+| Counterfactual Stress Amplification from Reconstructed Seeds | 7.5 | 6.0 | 8.0 | 6.5 | 6.0 | 7.0 | 6.8 | Revise |
+| Self-Calibrating Reconstruction with Minimal Map Priors | 7.0 | 5.5 | 7.0 | 6.5 | 6.0 | 6.5 | 6.4 | Kill |
+| Regional Traffic Style Transfer from Cheap Video | 6.5 | 5.5 | 6.5 | 5.5 | 4.5 | 5.5 | 5.7 | Kill |
 
-## Lead Recommendations
-- **Top 2 to deepen:** **Budgeted Reasoning with Retrieval Escalation** and **Query-Adaptive Retrieval Planner**. Both have strong impact stories, clean ablations, and plausible near-term baselines for small-model long-context reasoning.
-- **Kill immediately:** none yet by gate; however, **Memory-as-Argument Graph** should be treated as the first cut if scope tightens because its structure-building overhead is high relative to current evidence.
-- **Most likely novelty illusion:** **Hierarchical Summary Controller**. If the “controller” reduces to another summarization stack with heuristics, the contribution may collapse into pipeline tuning rather than a publishable reasoning advance.
+## Decision Notes
+- **Top 2 to deepen:** Error-Budget Cartography for Simulation Validity; Utility-Calibrated Monocular Reconstruction.
+- **Selected lead:** Combine the two into one paper arc: derive the planner-facing error budget first, then test whether constrained monocular reconstruction reaches the useful regime.
+- **Kill immediately:** Monocular Near-Miss Scenario Mining; Self-Calibrating Reconstruction with Minimal Map Priors; Regional Traffic Style Transfer.
+- **Most likely novelty illusion:** Interaction-Faithful Scene Reconstruction if it cannot show predictive value beyond standard trajectory metrics.
 
 ## Mandatory Gate
 - Total < 6.5 → Kill

@@ -1,0 +1,21 @@
+Abstract
+This proposal investigates whether low-cost monocular video can be used to reconstruct sufficiently
+faithful multi-agent traffic trajectories for downstream autonomous driving and ADAS stress testing.
+The central hypothesis is that a constrained reconstruction pipeline—combining 2D detection and
+tracking, ego-motion estimation, camera calibration, object-size priors, road-plane constraints, and
+temporal smoothing—can recover trajectories that are not perfect in absolute 3D terms but are still
+useful for replaying dense traffic interactions in simulation. The project is motivated by the gap
+between the scalability of simulation and the realism of real-world driving data, a gap that has become
+central in autonomous driving evaluation [1], [2], [3].
+The proposed contribution is not framed as a new monocular 3D estimator. Instead, the primary
+research question is whether imperfect monocular reconstruction is good enough for downstream
+simulation-based evaluation, and which kinds of error materially change the outcome of AV or ADAS
+testing. The work therefore sits at the intersection of monocular 3D perception and tracking [4], [5],
+trajectory-rich driving datasets [1], [6], [7], and simulation-centric AV evaluation [3], [8], [9].
+
+Problem Statement and Motivation
+Simulation is reproducible, scalable, and safer than real-world testing, but simulated traffic often
+fails to capture the interaction richness and localized behavior patterns that appear in real urban
+driving. Recent work argues that open-loop evaluation alone is insufficient because it does not capture
+compounding errors or realistic recovery behavior [3]. At the same time, collecting rich 3D trajectories
+with LiDAR-heavy fleets is expensive and difficult to scale across regions.

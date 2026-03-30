@@ -74,6 +74,32 @@ Primary shared files:
 - `shared/review-report.md` — analyst + reviewer judgments
 - `shared/final-writeup.typ` — final human-readable research writeup in Typst
 
+## Paper-Writing Standard
+
+When the workflow is producing a paper, proposal, or paper-style draft, default to **professional academic writing**, not outline-style notes.
+
+Required standard:
+- Write dense, polished, publication-style prose.
+- Introductions must motivate the problem clearly, explain why it matters, identify the gap, and frame contributions explicitly.
+- Problem statements must define the setting, constraints, action space, objective, and why the problem is nontrivial.
+- Related work should usually be written as flowing academic prose unless the user explicitly wants categorized subsections.
+- Proposed methods must be detailed enough that a technically strong reader can understand what is being proposed and how it would work.
+- Add mathematical formulation where needed, especially for objectives, constraints, and theory/error propagation.
+- Citations and references are mandatory in paper drafts.
+- Baselines and experimental framing must be concrete: specify candidate models, datasets/tasks, device classes, network conditions, metrics, staged experiments, ablations, and kill tests.
+- Clarify ambiguous paper terms in the text (for example, what a deadline means operationally).
+- Include figures/diagrams where useful; prefer self-contained generated figures if external assets are unnecessary.
+- Keep claims scoped and defensible; do not fabricate results.
+
+Default workflow for paper production:
+1. Draft in markdown or Typst.
+2. Run reviewer critique.
+3. Revise to address reviewer comments.
+4. Repeat reviewer/revision loop until major concerns are addressed.
+5. Produce final Typst draft and compile a PDF when feasible in the environment.
+
+If the environment cannot support a preferred template, fall back to a plain Typst layout that still compiles and preserves citations, figures, math, and professional formatting.
+
 ## Agent Definitions
 
 | Agent | File | Role |

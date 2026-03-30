@@ -1,0 +1,9 @@
+[project]
+name = "monocular-sim-validity"
+version = "0.1.0"
+description = "Pilot baseline for simulation-validity error-budget experiments"
+requires-python = ">=3.12"
+dependencies = [
+  "pyarrow",
+  "pandas",
+]

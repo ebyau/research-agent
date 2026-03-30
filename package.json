@@ -1,0 +1,24 @@
+{
+  "name": "research-agent",
+  "version": "1.0.0",
+  "description": "A multi-agent research workflow for OpenClaw that turns raw ideas into ranked research directions, experiment plans, baseline scaffolds, review feedback, and durable lab memory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ebyau/research-agent.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ebyau/research-agent/issues"
+  },
+  "homepage": "https://github.com/ebyau/research-agent#readme",
+  "dependencies": {
+    "@myriaddreamin/typst-ts-node-compiler": "^0.7.0-rc2",
+    "parquetjs-lite": "^0.8.7"
+  }
+}

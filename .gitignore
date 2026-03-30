@@ -1,0 +1,6 @@
+.venv/
+node_modules/
+data/
+shared/final-writeup.pdf
+__pycache__/
+*.pyc

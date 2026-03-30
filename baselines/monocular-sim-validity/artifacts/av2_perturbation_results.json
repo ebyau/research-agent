@@ -1,0 +1,45 @@
+{
+  "scenarios": 100,
+  "baseline": {
+    "near": 1101,
+    "ttc": 44945,
+    "conflict": 25124,
+    "minDist": 0.05440948171820837,
+    "activePairs": 394066
+  },
+  "conditions": {
+    "mild": {
+      "near": 1225,
+      "ttc": 44611,
+      "conflict": 25312,
+      "minDist": 0.07787977329135036,
+      "activePairs": 386930,
+      "delta_near": 124,
+      "delta_ttc": -334,
+      "delta_conflict": 188,
+      "delta_activePairs": -7136
+    },
+    "medium": {
+      "near": 1902,
+      "ttc": 42910,
+      "conflict": 25994,
+      "minDist": 0.03394355309685842,
+      "activePairs": 370418,
+      "delta_near": 801,
+      "delta_ttc": -2035,
+      "delta_conflict": 870,
+      "delta_activePairs": -23648
+    },
+    "severe": {
+      "near": 3050,
+      "ttc": 40087,
+      "conflict": 25450,
+      "minDist": 0.06169726153006484,
+      "activePairs": 334921,
+      "delta_near": 1949,
+      "delta_ttc": -4858,
+      "delta_conflict": 326,
+      "delta_activePairs": -59145
+    }
+  }
+}

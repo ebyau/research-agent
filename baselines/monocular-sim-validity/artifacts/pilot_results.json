@@ -1,0 +1,6 @@
+{
+  "gt_near_miss_count": 1,
+  "reconstructed_near_miss_count": 2,
+  "delta_near_miss_count": 1,
+  "validity_note": "Small deltas suggest planner-facing utility may survive reconstruction error."
+}
