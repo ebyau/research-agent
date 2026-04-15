@@ -24,6 +24,9 @@ coordinator
 ├── kill-test agent
 ├── paper-writer agent
 ├── paper-editor agent
+├── evidence-manager agent
+├── claim-checker agent
+├── paper-validator agent
 ├── writeup agent
 └── memory-manager agent
 ```
@@ -120,6 +123,9 @@ If the environment cannot support a preferred template, fall back to a plain Typ
 | kill-test | `agents/kill-test.md` | Design the cheapest falsification test before heavy work |
 | paper-writer | `agents/paper-writer.md` | Draft a research-grade paper or proposal in Typst |
 | paper-editor | `agents/paper-editor.md` | Refine the draft into coherent academic writing |
+| evidence-manager | `agents/evidence-manager.md` | Store source-backed evidence records |
+| claim-checker | `agents/claim-checker.md` | Verify that draft claims are supported |
+| paper-validator | `agents/paper-validator.md` | Run final quality gates before export |
 | writeup | `agents/writeup.md` | Consolidate the final research cycle into Typst |
 | memory-manager | `agents/memory-manager.md` | Capture durable research memory across cycles |
 
