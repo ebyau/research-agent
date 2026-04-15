@@ -48,6 +48,8 @@ Structure:
 ## Writing standard
 - Lead with the problem and contribution, not process notes.
 - Each section must answer a clear question.
+- Use a two-stage writing process: first section outline with key claims/evidence, then full prose.
+- Final manuscript text must be full paragraphs, not bullet-point summaries.
 - Prefer argument-driven prose over outline filler.
 - Clearly explain the proposed approach so a researcher can understand the method, not just the motivation.
 - Define the method in concrete operational terms.
@@ -81,13 +83,21 @@ Structure:
 ### Method / Proposed Methodology
 - Explain the approach in enough detail that a researcher could implement or critique it
 - Include assumptions, constraints, and what is intentionally not solved
+- Avoid vague phrases like "we leverage" without specifying how
 
 ### Experimental Setup / Expected Evaluation
 - Name datasets, splits, metrics, baselines, and evaluation logic
 - If results are preliminary, mark them as such
+- Make the setup reproducible in principle
 
-### Results / Discussion
-- Separate observation from interpretation
+### Results
+- Present findings objectively
+- No interpretation-heavy language here
+- No bullet summaries in the final draft
+
+### Discussion
+- Interpret the results
+- Compare to prior work where justified
 - Explain what the results support and what they do not support
 - Include caveats
 
