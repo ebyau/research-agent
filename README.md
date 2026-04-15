@@ -5,6 +5,7 @@ A multi-agent research workflow for OpenClaw that turns raw ideas into ranked re
 ## What it does
 
 This skill is built for research exploration rather than one-shot idea polishing.
+It is now file-orchestrated through shared artifacts, a run manifest, and explicit workflow gates.
 
 It supports:
 - batch ideation before committing too early
@@ -87,6 +88,7 @@ This initializes:
 - `shared/scorecard.md`
 - `shared/experiment-plan.md`
 - `shared/review-report.md`
+- `shared/run-manifest.json`
 
 ### 2. Run the agents in order
 

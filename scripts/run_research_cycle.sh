@@ -101,5 +101,26 @@ cat > "$SHARED/review-report.md" <<EOF
 ## Reviewer Section
 EOF
 
+cat > "$SHARED/run-manifest.json" <<EOF
+{
+  "topic": "${IDEA//"/\"}",
+  "mode": "proposal",
+  "stage": "batch-ideation",
+  "status": "active",
+  "requiredArtifacts": [
+    "research-draft.md",
+    "scorecard.md",
+    "experiment-plan.md",
+    "review-report.md"
+  ],
+  "gates": {
+    "scorecard": false,
+    "evidence_ready": false,
+    "draft_ready": false,
+    "final_validated": false
+  }
+}
+EOF
+
 echo "Initialized research cycle in: $SHARED"
 echo "Next recommended order: batch-ideation -> literature (shallow) -> gap-mapper -> skeptic -> scorecard-manager -> idea/critique on top candidates -> brief -> kill-test -> experiment-designer -> baseline -> analyst -> reviewer -> memory-manager"

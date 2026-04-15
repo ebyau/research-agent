@@ -1,0 +1,13 @@
+{
+  "topic": "",
+  "mode": "proposal",
+  "stage": "init",
+  "status": "pending",
+  "requiredArtifacts": [],
+  "gates": {
+    "scorecard": false,
+    "evidence_ready": false,
+    "draft_ready": false,
+    "final_validated": false
+  }
+}
